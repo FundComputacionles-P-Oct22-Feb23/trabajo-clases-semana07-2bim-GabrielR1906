@@ -1,0 +1,63 @@
+1. Inicio
+2. funcion principal()
+3. 	(nombres(4),x(10)[{a-z}, {A-Z}, {BS}])
+4. 	(materias(4),x(50)[{a-z}, {A-Z}, {BS}])
+5. 	(programación(4), i[0-n])
+6. 	(matematicas(4), i[0-n])
+7. 	(basedatos(4), i[0-n])
+8. 	(estructurasdatos(4), i[0-n])
+9. 	(promedionotas(4), d[0-n])
+10. 	(promediomaterias(4), d[0-n])
+
+11. 	nombres <-- {"José", "Luis", "María", "Ana"}
+12. 	materias <-- {"Programación", "Matemáticas", "Base de Datos", "Estructuras de Datos"}
+13. 	programación <-- {9, 3, 7, 10}
+14. 	matematicas <-- {10, 10, 8, 9}
+15. 	basedatos <-- {8, 6, 10, 8}
+16. 	estructurasdatos <-- {7, 5, 9, 6}
+17. 	promedionotas <-- {0, 0, 0, 0}
+18. 	promediomaterias <-- {0, 0, 0, 0}
+
+19. 	<< "Reporte de Notas del Paralelo"
+20. 	Para (i <-- 0 , i < 4, 1) haga
+21. 		promedionotas[i] <-- obtenerPromedio(programacion[i], matematicas[i], basedatos[i], estructurasdatos[i])
+22.		mensaje <-- ObtenerMensaje(nombres[i], programacion[i], matematicas[i], basedatos[i], 
+								estructurasdatos[i], promedionotas[i])
+23. 		<< mensaje
+24. 	Fin Para
+
+25. 	promediomaterias[0] <-- obtenerPromedio(programacion[0], programacion[1], programacion[2], programacion[3])
+26. 	promediomaterias[1] <-- obtenerPromedio(matematicas[0], matematicas[1], matematicas[2], matematicas[3])
+27. 	promediomaterias[2] <-- obtenerPromedio(basedatos[0], basedatos[1], basedatos[2], basedatos[3])
+28. 	promediomaterias[3] <-- obtenerPromedio(estructurasdatos[0], estructurasdatos[1], estructurasdatos[2], estructurasdatos[3])
+ 
+29. 	Para (i <-- 0 , i < 4, 1) haga
+30. 		presentarPromedioMaterias (materias[i], promediomaterias[i])
+31. 	Fin Para
+32. fin funcion principal
+
+33. funcion obtenerPromedio(nota1, i; nota2, i; nota3, i; nota4, i):d 
+34. 	promedio <-- (nota1 + nota2 + nota3 + nota4) / 4
+35. 	retorna promedio
+36. fin obtenerPromedio
+
+37. funcion obtenerMensaje (nombre, x(10); nota1, i; nota2, i; nota3, i; nota4, i; promedio, d):x
+38. 	mensaje <-- "Notas de " + nombre + ":" + \n + nota1 + \n + nota2 + \n +  nota3 + \n + nota4 + \n + 
+				"Promedio de notas " + promedio + \n + \n
+39. 	retorna mensaje
+40. fin obtenerMensaje
+
+41. funcion presentarPromedioMaterias (materias, x(50); promedio, d)
+42. 	<< "Promedio de notas " + materias + ": " + promedio
+43. fin presentarPromedioMaterias
+44. Fin
+
+
+
+
+
+
+
+
+
+
